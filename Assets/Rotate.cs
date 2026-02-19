@@ -13,7 +13,7 @@ public class Rotate: MonoBehaviour
         if (objectToRotate != null)
         {
             // Вращаем вокруг оси Y
-            objectToRotate.transform.Rotate(0f, rotationAngle, 0f);
+            objectToRotate.transform.Rotate(rotationAngle, 0f, 0f);
         }
     }
 } 
