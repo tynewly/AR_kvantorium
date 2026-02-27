@@ -14,6 +14,7 @@ public class Rotate: MonoBehaviour
         {
             // Вращаем вокруг оси Y
             objectToRotate.transform.Rotate(rotationAngle, 0f, 0f);
+            Debug.Log("Click");
         }
     }
 } 
