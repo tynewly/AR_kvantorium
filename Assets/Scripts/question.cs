@@ -16,12 +16,16 @@ public class question : MonoBehaviour
         {
             buttonWrong[i].GetComponent<Image>().color = color;
         }
+        correctButton.GetComponent<Image>().color = Color.green;
     }
     public void correctAnswer()
     {
     color = Color.green;
     correctButton.GetComponent<Image>().color = color;
-
+        for (int i = 0; i < buttonWrong.Length; i++)
+        {
+            buttonWrong[i].GetComponent<Image>().color = Color.red;
+        }
     }
 
     void Update()
