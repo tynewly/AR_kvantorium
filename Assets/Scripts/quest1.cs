@@ -1,11 +1,13 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class quest1 : MonoBehaviour
 {
     public TextMeshProUGUI Text;
     public GameObject Canvas_quest;
     public GameObject Canvas_quiz;
+    public Button[] buttons; 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -21,16 +23,22 @@ public class quest1 : MonoBehaviour
     public void button1()
     {
         Text.text = "Вы испугались и решили откупиться. Отдайте 1 любую единицу товара";
+        buttons[1].interactable = false;
+        buttons[2].interactable = false;
     }
 
     public void button2()
     {
         Text.text = "Вы не повелись на провокации. Бросьте кубик, он определит исход драки";
+        buttons[0].interactable = false;
+        buttons[2].interactable = false;
     }
 
     public void button3()
     {
         Text.text = "Противники оказались слишком сильны, вернитесь на 2 шага назад";
+        buttons[1].interactable = false;
+        buttons[0].interactable = false;
     }
 
 
