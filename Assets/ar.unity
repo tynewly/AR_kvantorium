@@ -720,6 +720,10 @@ MonoBehaviour:
   Text: {fileID: 706195433}
   Canvas_quest: {fileID: 1232339374}
   Canvas_quiz: {fileID: 141103358}
+  buttons:
+  - {fileID: 1981600663}
+  - {fileID: 1815546783}
+  - {fileID: 2058968172}
 --- !u!4 &460537984
 Transform:
   m_ObjectHideFlags: 0
