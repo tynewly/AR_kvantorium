@@ -7,17 +7,27 @@ public class quest1 : MonoBehaviour
     public TextMeshProUGUI Text;
     public GameObject Canvas_quest;
     public GameObject Canvas_quiz;
+<<<<<<< HEAD
 <<<<<<< Updated upstream
     public Button[] buttons; 
 =======
     public GameObject Button_notUse1;
     public GameObject Button_notUse2;
 >>>>>>> Stashed changes
+=======
+    public Button[] buttons;
+>>>>>>> 07b30b5b8ca192469643db83c1f9c86de55ee5a7
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         Canvas_quest.SetActive(false);
         Canvas_quiz.SetActive(false);
+    }
+
+    
+    public void Exit()
+    { 
+    Canvas_quest.SetActive(false);
     }
 
     public void correctTarget()
