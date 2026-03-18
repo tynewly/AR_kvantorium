@@ -7,7 +7,12 @@ public class quest1 : MonoBehaviour
     public TextMeshProUGUI Text;
     public GameObject Canvas_quest;
     public GameObject Canvas_quiz;
+<<<<<<< Updated upstream
     public Button[] buttons; 
+=======
+    public GameObject Button_notUse1;
+    public GameObject Button_notUse2;
+>>>>>>> Stashed changes
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -23,8 +28,12 @@ public class quest1 : MonoBehaviour
     public void button1()
     {
         Text.text = "Вы испугались и решили откупиться. Отдайте 1 любую единицу товара";
+<<<<<<< Updated upstream
         buttons[1].interactable = false;
         buttons[2].interactable = false;
+=======
+       
+>>>>>>> Stashed changes
     }
 
     public void button2()
