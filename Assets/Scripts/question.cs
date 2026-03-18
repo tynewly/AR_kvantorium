@@ -2,6 +2,8 @@ using UnityEngine;
 using UnityEngine.UI;
 public class question : MonoBehaviour 
 {
+    public Button exit;
+    public GameObject Canvas_quiz;
     public Button[] buttonWrong;
     public Button correctButton;
     public GameObject win;
@@ -20,6 +22,18 @@ public class question : MonoBehaviour
       
 
     }
+
+    public void Exit()
+    {
+        Canvas_quiz.SetActive(false);
+    }
+
+    public void Quiz()
+    {
+        Canvas_quiz.SetActive(true);
+        exit.interactable = true;
+    }
+
     public void timeAnswer()
     {
         if (answer == false)
