@@ -7,23 +7,33 @@ public class quest1 : MonoBehaviour
     public TextMeshProUGUI Text;
     public GameObject Canvas_quest;
     public GameObject Canvas_quiz;
+    public GameObject Canvas_start;
     public Button[] buttons;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         Canvas_quest.SetActive(false);
         Canvas_quiz.SetActive(false);
+        Canvas_start.SetActive(true);
     }
 
     
     public void Exit()
     { 
-    Canvas_quest.SetActive(false);
+       Canvas_quest.SetActive(false);
+       Canvas_quiz.SetActive(true);
+
     }
 
-    public void correctTarget()
+    public void correctTarget_quest()
     {
         Canvas_quest.SetActive(true);
+    }
+
+
+    public void correctTarget_quiz()
+    {
+        Canvas_quiz.SetActive(true);
     }
 
     public void button1()
