@@ -7,43 +7,40 @@ public class quest1 : MonoBehaviour
     public TextMeshProUGUI Text;
     public GameObject Canvas_quest;
     public GameObject Canvas_quiz;
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-    public Button[] buttons; 
-=======
-    public GameObject Button_notUse1;
-    public GameObject Button_notUse2;
->>>>>>> Stashed changes
-=======
+    public GameObject Canvas_start;
     public Button[] buttons;
->>>>>>> 07b30b5b8ca192469643db83c1f9c86de55ee5a7
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         Canvas_quest.SetActive(false);
         Canvas_quiz.SetActive(false);
+        Canvas_start.SetActive(true);
     }
 
     
     public void Exit()
     { 
-    Canvas_quest.SetActive(false);
+       Canvas_quest.SetActive(false);
+       Canvas_quiz.SetActive(true);
+
     }
 
-    public void correctTarget()
+    public void correctTarget_quest()
     {
         Canvas_quest.SetActive(true);
+    }
+
+
+    public void correctTarget_quiz()
+    {
+        Canvas_quiz.SetActive(true);
     }
 
     public void button1()
     {
         Text.text = "Вы испугались и решили откупиться. Отдайте 1 любую единицу товара";
-<<<<<<< Updated upstream
         buttons[1].interactable = false;
         buttons[2].interactable = false;
-=======
-       
->>>>>>> Stashed changes
     }
 
     public void button2()
