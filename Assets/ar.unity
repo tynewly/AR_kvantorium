@@ -551,142 +551,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 184069968}
   m_CullTransparentMesh: 1
---- !u!1 &258978222
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 258978226}
-  - component: {fileID: 258978225}
-  - component: {fileID: 258978224}
-  - component: {fileID: 258978223}
-  m_Layer: 0
-  m_Name: ImageTarget_quiz
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &258978223
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 258978222}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
-  mObserverBehaviour: {fileID: 258978225}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: i1
-  mDatasetName: Vuforia/test.xml
-  mCastedBehaviour: {fileID: 258978225}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
---- !u!114 &258978224
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 258978222}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 886328de6a5c14cbb85854fdf1a5085b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: VuforiaScripts::DefaultObserverEventHandler
-  StatusFilter: 1
-  UsePoseSmoothing: 0
-  AnimationCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 3.3333333
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 0.3
-      value: 1
-      inSlope: 3.3333333
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  OnTargetFound:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 460537983}
-        m_TargetAssemblyTypeName: quest1, Assembly-CSharp
-        m_MethodName: Quiz
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  OnTargetLost:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &258978225
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 258978222}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1631628248, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetBehaviour
-  PreviewVisible: 1
-  RuntimeOcclusion: 0
-  RuntimeCollider: 0
-  mTrackableName: i1
-  mInitializedInEditor: 1
-  mDataSetPath: Vuforia/test.xml
-  mAspectRatio: 0.6662162
-  mImageTargetType: 0
-  mWidth: 10
-  mHeight: 6.662162
-  mRuntimeTexture: {fileID: 0}
-  mMotionHint: 1
-  mTrackingOptimization: 0
-  mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 258978223}
---- !u!4 &258978226
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 258978222}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.00001}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 672621454}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &460537982
 GameObject:
   m_ObjectHideFlags: 0
@@ -1006,112 +870,6 @@ RectTransform:
   m_AnchoredPosition: {x: -209, y: 63}
   m_SizeDelta: {x: 230, y: 65}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &672621453
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 672621454}
-  m_Layer: 0
-  m_Name: quiz1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &672621454
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 672621453}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.00001}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 258978226}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &695005470
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1141099399}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: a454dc720b4bc3345b3652e03ed575a3, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.080000006
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: a454dc720b4bc3345b3652e03ed575a3, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.080000006
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: a454dc720b4bc3345b3652e03ed575a3, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.07999999
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: a454dc720b4bc3345b3652e03ed575a3, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.038088813
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: a454dc720b4bc3345b3652e03ed575a3, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.188
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: a454dc720b4bc3345b3652e03ed575a3, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.12756467
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: a454dc720b4bc3345b3652e03ed575a3, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.77868277
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: a454dc720b4bc3345b3652e03ed575a3, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.6169841
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: a454dc720b4bc3345b3652e03ed575a3, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.094199814
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: a454dc720b4bc3345b3652e03ed575a3, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0.064110495
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: a454dc720b4bc3345b3652e03ed575a3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 71.585
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: a454dc720b4bc3345b3652e03ed575a3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -45.628
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: a454dc720b4bc3345b3652e03ed575a3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: -43.158
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: a454dc720b4bc3345b3652e03ed575a3, type: 3}
-      propertyPath: m_Name
-      value: ship
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: a454dc720b4bc3345b3652e03ed575a3, type: 3}
---- !u!4 &695005471 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a454dc720b4bc3345b3652e03ed575a3, type: 3}
-  m_PrefabInstance: {fileID: 695005470}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &696675024
 GameObject:
   m_ObjectHideFlags: 0
@@ -2033,7 +1791,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 460537983}
         m_TargetAssemblyTypeName: quest1, Assembly-CSharp
-        m_MethodName: correctTarget
+        m_MethodName: correctTarget_quest
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2189,7 +1947,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 460537983}
         m_TargetAssemblyTypeName: quest1, Assembly-CSharp
-        m_MethodName: correctTarget
+        m_MethodName: correctTarget_quiz
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2241,145 +1999,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 695005471}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1176695700
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1176695704}
-  - component: {fileID: 1176695703}
-  - component: {fileID: 1176695702}
-  - component: {fileID: 1176695701}
-  m_Layer: 0
-  m_Name: ImageTarget_
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1176695701
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1176695700}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
-  mObserverBehaviour: {fileID: 1176695703}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: i1
-  mDatasetName: Vuforia/test.xml
-  mCastedBehaviour: {fileID: 1176695703}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
---- !u!114 &1176695702
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1176695700}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 886328de6a5c14cbb85854fdf1a5085b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: VuforiaScripts::DefaultObserverEventHandler
-  StatusFilter: 1
-  UsePoseSmoothing: 0
-  AnimationCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 3.3333333
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 0.3
-      value: 1
-      inSlope: 3.3333333
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  OnTargetFound:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 460537983}
-        m_TargetAssemblyTypeName: quest1, Assembly-CSharp
-        m_MethodName: correctTarget
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  OnTargetLost:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &1176695703
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1176695700}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1631628248, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetBehaviour
-  PreviewVisible: 1
-  RuntimeOcclusion: 0
-  RuntimeCollider: 0
-  mTrackableName: i1
-  mInitializedInEditor: 1
-  mDataSetPath: Vuforia/test.xml
-  mAspectRatio: 0.6662162
-  mImageTargetType: 0
-  mWidth: 10
-  mHeight: 6.662162
-  mRuntimeTexture: {fileID: 0}
-  mMotionHint: 1
-  mTrackingOptimization: 0
-  mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 1176695701}
---- !u!4 &1176695704
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1176695700}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1478481276}
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1190567213
@@ -2843,11 +2463,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::hideScript
   hideQuestion:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 828433505}
+  - {fileID: 537466293}
+  - {fileID: 501993137}
+  - {fileID: 86523458}
+  - {fileID: 2115405575}
   rotate: {fileID: 1738155439}
   question: {fileID: 175128082}
 --- !u!114 &1253638995
@@ -2894,19 +2514,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1253638994}
-        m_TargetAssemblyTypeName: hideScript, Assembly-CSharp
-        m_MethodName: openQuiz
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1253638992}
         m_TargetAssemblyTypeName: hideScript, Assembly-CSharp
         m_MethodName: 
         m_Mode: 1
@@ -3093,80 +2701,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1460618728}
   m_CullTransparentMesh: 1
---- !u!1001 &1478481275
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1176695704}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: a454dc720b4bc3345b3652e03ed575a3, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.080000006
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: a454dc720b4bc3345b3652e03ed575a3, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.080000006
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: a454dc720b4bc3345b3652e03ed575a3, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.07999999
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: a454dc720b4bc3345b3652e03ed575a3, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.038088813
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: a454dc720b4bc3345b3652e03ed575a3, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.188
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: a454dc720b4bc3345b3652e03ed575a3, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.12756467
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: a454dc720b4bc3345b3652e03ed575a3, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.77868277
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: a454dc720b4bc3345b3652e03ed575a3, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.6169841
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: a454dc720b4bc3345b3652e03ed575a3, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.094199814
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: a454dc720b4bc3345b3652e03ed575a3, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0.064110495
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: a454dc720b4bc3345b3652e03ed575a3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 71.585
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: a454dc720b4bc3345b3652e03ed575a3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -45.628
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: a454dc720b4bc3345b3652e03ed575a3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: -43.158
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: a454dc720b4bc3345b3652e03ed575a3, type: 3}
-      propertyPath: m_Name
-      value: ship
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: a454dc720b4bc3345b3652e03ed575a3, type: 3}
---- !u!4 &1478481276 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a454dc720b4bc3345b3652e03ed575a3, type: 3}
-  m_PrefabInstance: {fileID: 1478481275}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1522980941
 GameObject:
   m_ObjectHideFlags: 0
@@ -4983,7 +4517,6 @@ SceneRoots:
   - {fileID: 1213385680}
   - {fileID: 1073593081}
   - {fileID: 1141099399}
-  - {fileID: 1176695704}
   - {fileID: 141103363}
   - {fileID: 2038786048}
   - {fileID: 1758839043}
@@ -4991,4 +4524,3 @@ SceneRoots:
   - {fileID: 175128084}
   - {fileID: 1232339375}
   - {fileID: 460537984}
-  - {fileID: 672621454}
