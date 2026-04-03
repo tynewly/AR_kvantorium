@@ -9,12 +9,14 @@ public class quest1 : MonoBehaviour
     public GameObject Canvas_quiz;
     public GameObject Canvas_start;
     public Button[] buttons;
+    public GameObject exit;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         Canvas_quest.SetActive(false);
         Canvas_quiz.SetActive(false);
         Canvas_start.SetActive(true);
+        exit.SetActive(false);
     }
 
     
@@ -41,6 +43,7 @@ public class quest1 : MonoBehaviour
         Text.text = "Вы испугались и решили откупиться. Отдайте 1 любую единицу товара";
         buttons[1].interactable = false;
         buttons[2].interactable = false;
+        exit.SetActive(true);
     }
 
     public void button2()
@@ -48,6 +51,7 @@ public class quest1 : MonoBehaviour
         Text.text = "Вы не повелись на провокации. Бросьте кубик, он определит исход драки";
         buttons[0].interactable = false;
         buttons[2].interactable = false;
+        exit.SetActive(true);
     }
 
     public void button3()
@@ -55,6 +59,7 @@ public class quest1 : MonoBehaviour
         Text.text = "Противники оказались слишком сильны, вернитесь на 2 шага назад";
         buttons[1].interactable = false;
         buttons[0].interactable = false;
+        exit.SetActive(true);
     }
 
 

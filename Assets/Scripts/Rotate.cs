@@ -2,6 +2,11 @@ using UnityEngine;
 
 public class Rotate: MonoBehaviour
 {
+    public GameObject rotate_button;
+    public void Start()
+    {
+      rotate_button.SetActive(false);
+    }
     public GameObject objectToRotate;
 
     // ”гол вращени€ за один клик

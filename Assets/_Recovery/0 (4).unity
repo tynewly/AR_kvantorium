@@ -590,7 +590,6 @@ MonoBehaviour:
   - {fileID: 1815546783}
   - {fileID: 2058968172}
   - {fileID: 1522980942}
-  exit: {fileID: 1522980941}
 --- !u!4 &460537984
 Transform:
   m_ObjectHideFlags: 0
@@ -1902,7 +1901,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
   mObserverBehaviour: {fileID: 1141099398}
   mHiddenRoot: {fileID: 0}
-  mTargetName: quiz
+  mTargetName: i1
   mDatasetName: Vuforia/test.xml
   mCastedBehaviour: {fileID: 1141099398}
   mMeshFilter: {fileID: 0}
@@ -1978,13 +1977,13 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: quiz
+  mTrackableName: i1
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/test.xml
-  mAspectRatio: 0.55813813
+  mAspectRatio: 0.6662162
   mImageTargetType: 0
-  mWidth: 0.21
-  mHeight: 0.117209
+  mWidth: 10
+  mHeight: 6.662162
   mRuntimeTexture: {fileID: 0}
   mMotionHint: 1
   mTrackingOptimization: 0
