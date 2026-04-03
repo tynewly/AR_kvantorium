@@ -23,7 +23,7 @@ public class quest1 : MonoBehaviour
     public void Exit()
     { 
        Canvas_quest.SetActive(false);
-       Canvas_quiz.SetActive(false);
+       Canvas_quiz.SetActive(true);
 
     }
 

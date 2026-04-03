@@ -17,14 +17,12 @@ public class Translate : MonoBehaviour
     private Color color;
     public TextMeshProUGUI Text;
     public int count = 0;
-    public GameObject Button;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         Canvas_translate.SetActive(false);
-        Button.SetActive(false);
-
+ 
     }
     
 
@@ -70,11 +68,6 @@ public class Translate : MonoBehaviour
         variants[1].interactable = false;
         v2 = true;
     }
-    public void exit()
-    {
-        Canvas_translate.SetActive(false);
-        Button.SetActive(false);
-    }
 
 
     // Update is called once per frame
@@ -101,53 +94,6 @@ public class Translate : MonoBehaviour
 
 
         }
-        if (c1 == v1)
-        {
-
-            card[0].interactable = true;
-            card[2].interactable = true;
-            variants[0].interactable = true;
-            variants[2].interactable = true; //но тогда я смогу нажать и на карту 1 и на карту 2, а мне такое не надо
-            card[1].IsDestroyed();
-            variants[1].IsDestroyed();
-            count++;
-            Text.text = $"Верно сопоставлено вариантов: {count} ";
-
-        }
-        else
-        {
-            color = Color.red;
-            Text.text = $"Вы проиграли, правильно вариантов: {count}";
-
-
-
-        }
-        if (c2 == v2)
-        {
-
-            card[0].interactable = true;
-            card[1].interactable = true;
-            variants[0].interactable = true;
-            variants[1].interactable = true; //но тогда я смогу нажать и на карту 1 и на карту 2, а мне такое не надо
-            card[2].IsDestroyed();
-            variants[2].IsDestroyed();
-            count++;
-            Text.text = $"Верно сопоставлено вариантов: {count} ";
-
-        }
-        else
-        {
-            color = Color.red;
-            Text.text = $"Вы проиграли, правильно вариантов: {count}";
-
-
-
-        }
-        if (count == 3)
-        {
-            Text.text = "Все верно, получите 1 золотую монету";
-            Button.SetActive(true);
-        }
-
+       
     }
 }
