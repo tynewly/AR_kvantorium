@@ -179,16 +179,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 34215531}
-  m_LocalRotation: {x: -0, y: -0, z: -0.042102396, w: 0.9991133}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.4419, y: 1.4419, z: 1.4419}
+  m_LocalScale: {x: 1.4419001, y: 1.4419001, z: 1.4419}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 478327361}
+  m_Father: {fileID: 2038786048}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 181, y: -55}
+  m_AnchoredPosition: {x: 187.98203, y: -2.440857}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &86523458
@@ -771,8 +771,9 @@ GameObject:
   - component: {fileID: 315013872}
   - component: {fileID: 315013874}
   - component: {fileID: 315013873}
+  - component: {fileID: 315013875}
   m_Layer: 5
-  m_Name: RawImage_glass
+  m_Name: RawImage_start
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -832,6 +833,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 315013871}
   m_CullTransparentMesh: 1
+--- !u!114 &315013875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 315013871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2493f3c818407f840ab5a0543a4698fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FollowFinger
+  Glass: {fileID: 34215532}
+  Button_start: {fileID: 478327360}
+  Canvas_start: {fileID: 2038786044}
 --- !u!1 &460537982
 GameObject:
   m_ObjectHideFlags: 0
@@ -918,8 +934,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1224120249}
-  - {fileID: 34215534}
-  - {fileID: 658846207}
   m_Father: {fileID: 2038786048}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 4.826}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -970,7 +984,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 478327363}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: FollowFinger, Assembly-CSharp
+        m_MethodName: Button_startGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &478327363
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1275,53 +1301,6 @@ RectTransform:
   m_AnchoredPosition: {x: -209, y: 63}
   m_SizeDelta: {x: 230, y: 65}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &658846206
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 658846207}
-  - component: {fileID: 658846208}
-  m_Layer: 0
-  m_Name: FingerManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &658846207
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 658846206}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0.042102396, w: 0.9991133}
-  m_LocalPosition: {x: -690.0893, y: 24.544172, z: 0}
-  m_LocalScale: {x: 0.9, y: 0.9, z: 0.9}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 478327361}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &658846208
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 658846206}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2493f3c818407f840ab5a0543a4698fd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::FollowFinger
-  Glass: {fileID: 34215532}
-  Button_start: {fileID: 478327360}
-  Canvas_start: {fileID: 2038786044}
 --- !u!1 &672621453
 GameObject:
   m_ObjectHideFlags: 0
@@ -4747,6 +4726,7 @@ RectTransform:
   m_Children:
   - {fileID: 315013872}
   - {fileID: 478327361}
+  - {fileID: 34215534}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}

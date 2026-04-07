@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 public class FollowFinger : MonoBehaviour
@@ -14,7 +15,7 @@ public class FollowFinger : MonoBehaviour
  
         
     }
-    void Button_startGame()
+    public void Button_startGame()
     {
         Canvas_start.SetActive(false);
         Glass.gameObject.SetActive(false);
@@ -23,12 +24,13 @@ public class FollowFinger : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.touchCount > 0) // Если было найдено хоть одно касание?
+        if (Mouse.current.leftButton.wasPressedThisFrame) // Если было найдено хоть одно касание?
         {
             Touch touch = Input.GetTouch(0);
           // Touch это тип данных. Он типо берет инфу о пальце и сохраняет в переменную tоuch
             Glass.gameObject.SetActive(true);
             Glass.transform.position = touch.position;
+            Debug.Log("работает");
         }
         else
         {
