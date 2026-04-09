@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class FollowFinger : MonoBehaviour
 {
-    public Gameobject Glass;
+    public GameObject Glass;
     public GameObject Button_start;
     public GameObject Canvas_start;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
