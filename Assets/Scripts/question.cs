@@ -11,7 +11,8 @@ public class question : MonoBehaviour
     private Color color;
     public float time = 30;
     private bool answer = false;
-  
+    public GameObject Quiz_button;
+
 
 
 
@@ -28,6 +29,11 @@ public class question : MonoBehaviour
         Canvas_quiz.SetActive(false);
     }
 
+    public void Target_quiz_found()
+    {
+        Quiz_button.SetActive(true);
+
+    }
     public void Quiz()
     {
         Canvas_quiz.SetActive(true);

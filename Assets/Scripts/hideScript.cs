@@ -8,11 +8,11 @@ public class hideScript : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        for (int i = 0; i < hideQuestion.Length; i++)
-        {
-            hideQuestion[i].SetActive(false);
-        }
-        question.SetActive(false);
+       // for (int i = 0; i < hideQuestion.Length; i++)
+        //{
+           // hideQuestion[i].SetActive(false);
+        //}
+        //question.SetActive(false);
     }
 
     public void openQuiz()
