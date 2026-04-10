@@ -84,15 +84,39 @@ public class Translate : MonoBehaviour
             variants[0].IsDestroyed();
             count++;
             Text.text = $"¬ерно сопоставлено вариантов: {count} ";
+        }
+        else if (c1 == v1)
+        {
 
+            card[0].interactable = true;
+            card[2].interactable = true;
+            variants[0].interactable = true;
+            variants[2].interactable = true; //но тогда € смогу нажать и на карту 1 и на карту 2, а мне такое не надо
+            card[1].IsDestroyed();
+            variants[1].IsDestroyed();
+            count++;
+            Text.text = $"¬ерно сопоставлено вариантов: {count} ";
+        }
+        else if (c2 == v2)
+        {
+
+            card[0].interactable = true;
+            card[1].interactable = true;
+            variants[0].interactable = true;
+            variants[1].interactable = true; //но тогда € смогу нажать и на карту 1 и на карту 2, а мне такое не надо
+            card[2].IsDestroyed();
+            variants[2].IsDestroyed();
+            count++;
+            Text.text = $"¬ерно сопоставлено вариантов: {count} ";
         }
         else
         {
             color = Color.red;
-            Text.text =  $"¬ы проиграли, правильно вариантов: {count}";
-
-
-
+            Text.text =  $"¬ы проиграли, правильно  вариантов: {count}";
+        }
+        if ( count == 3)
+        {
+            Text.text = "¬ы победили! ѕолучите 2 монеты";
         }
        
     }

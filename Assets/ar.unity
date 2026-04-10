@@ -458,7 +458,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 175128082}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2a1b518322fd1e14a9b435851b557396, type: 3}
   m_Name: 
@@ -2426,7 +2426,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 175128083}
         m_TargetAssemblyTypeName: question, Assembly-CSharp
-        m_MethodName: Quiz
+        m_MethodName: Target_quiz_found
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3071,6 +3071,8 @@ MonoBehaviour:
   - {fileID: 1815546783}
   - {fileID: 2058968172}
   exit: {fileID: 1522980941}
+  rotate: {fileID: 1738155439}
+  ship: {fileID: 1977906986}
 --- !u!1 &1253638992
 GameObject:
   m_ObjectHideFlags: 0
@@ -3083,7 +3085,6 @@ GameObject:
   - component: {fileID: 1253638997}
   - component: {fileID: 1253638996}
   - component: {fileID: 1253638995}
-  - component: {fileID: 1253638994}
   m_Layer: 5
   m_Name: quizButton
   m_TagString: Untagged
@@ -3111,26 +3112,6 @@ RectTransform:
   m_AnchoredPosition: {x: -569, y: 1187}
   m_SizeDelta: {x: 150, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1253638994
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1253638992}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d85e97b5d0266f24397ee7505b50fb7a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::hideScript
-  hideQuestion:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  rotate: {fileID: 1738155439}
-  question: {fileID: 175128082}
 --- !u!114 &1253638995
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3175,13 +3156,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 175128082}
-        m_TargetAssemblyTypeName: hideScript, Assembly-CSharp
-        m_MethodName: 
+      - m_Target: {fileID: 175128083}
+        m_TargetAssemblyTypeName: question, Assembly-CSharp
+        m_MethodName: Quiz
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 

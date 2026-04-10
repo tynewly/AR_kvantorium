@@ -10,6 +10,8 @@ public class quest1 : MonoBehaviour
     public GameObject Canvas_start;
     public Button[] buttons;
     public GameObject exit;
+    public GameObject rotate;
+    public GameObject ship;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -17,12 +19,15 @@ public class quest1 : MonoBehaviour
         Canvas_quiz.SetActive(false);
         Canvas_start.SetActive(true);
         exit.SetActive(false);
+        rotate.SetActive(false);
+        ship.SetActive(true);
     }
 
     
     public void Exit()
     { 
        Canvas_quest.SetActive(false);
+        ship.SetActive(false);
       
 
     }
@@ -30,6 +35,7 @@ public class quest1 : MonoBehaviour
     public void correctTarget_quest()
     {
         Canvas_quest.SetActive(true);
+
     }
 
 
