@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 public class question : MonoBehaviour 
 {
+    //этот? да
     public Button exit;
     public GameObject Canvas_quiz;
     public Button[] buttonWrong;
@@ -15,13 +16,12 @@ public class question : MonoBehaviour
 
 
 
-
+   
     void Start()
     {
+        //Canvas_quiz.SetActive(false); //а как он появится если ты канвас с ним выключаекшь?
         win.SetActive(false);
         lose.SetActive(false);
-      
-
     }
 
     public void Exit()
@@ -29,15 +29,16 @@ public class question : MonoBehaviour
         Canvas_quiz.SetActive(false);
     }
 
-    public void Target_quiz_found()
+    public void Target_quiz_found() //тут с
     {
         Quiz_button.SetActive(true);
-
+        //Canvas_quiz.SetActive(false); // а тут отключаешь ты что сканируешь то? какой метод при сканирвоание метки появляется кнопка квиза, а кнопка квиза активирует его, ну канвас
     }
-    public void Quiz()
+    public void Quiz() // и тут
     {
         Canvas_quiz.SetActive(true);
         exit.interactable = true;
+        Quiz_button.SetActive(false); //кароче уберу лишнее и забилди вот так вот
     }
 
     public void timeAnswer()
@@ -82,7 +83,7 @@ public class question : MonoBehaviour
 
     }
 
-    void FixedUpdate()
+    void FixedUpdate()//это код я писал чтоле? да, ваш почерк. Ну сразу видно умный человек писал ахпхпа конечно а в чем разница fixedUpdate? 
     {
         timeAnswer();
     }
