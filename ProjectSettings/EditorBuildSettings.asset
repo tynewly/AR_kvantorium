@@ -11,6 +11,12 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/translate.unity
+    guid: e1ec1eb9de2fc8448a40a12265029640
+  - enabled: 1
+    path: Assets/Scenes/translate_ancient_russian.unity
+    guid: 699ebec1567055340a4a08fe77c2b12e
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: eae7022f5cfd04e8189b1f372421b225, type: 3}
   m_UseUCBPForAssetBundles: 0
