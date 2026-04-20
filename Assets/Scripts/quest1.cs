@@ -1,47 +1,56 @@
-using UnityEngine;
 using TMPro;
+using UnityEngine;
 using UnityEngine.UI;
+//using UnityEngine.UIElements;
 
 public class quest1 : MonoBehaviour
 {
     public TextMeshProUGUI Text;
     public GameObject Canvas_quest;
-    public GameObject Canvas_quiz;
-    public GameObject Canvas_start;
     public Button[] buttons;
     public GameObject exit;
-    public GameObject rotate;
     public GameObject ship;
+    private bool hasInteracted = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        Canvas_quest.SetActive(false);
-        Canvas_quiz.SetActive(false);
-        Canvas_start.SetActive(true);
+        //основной прикол здесь смотри, у тебя скрип там вырубался и тут вырубался по-этому он нормально сканировался только со второго раза
+       //понятненько? За кого? Непонял ничего не писал.Но я не вижу взаимосвязи между тем .что я 2 раза написала canvas_quest и у меня сканировалось тока с 2 раза.
+        //Canvas_quest.SetActive(false);
+
+        //я голосом записал слушаю
         exit.SetActive(false);
-        rotate.SetActive(false);
         ship.SetActive(true);
     }
 
-    
+
     public void Exit()
-    { 
-       Canvas_quest.SetActive(false);
+    {
+        Canvas_quest.SetActive(false);
         ship.SetActive(false);
-      
+        hasInteracted = true;
 
     }
 
     public void correctTarget_quest()
     {
         Canvas_quest.SetActive(true);
-
     }
+    //public void correctTarget_quest_lost()
+    //{
+    //Canvas_quest.SetActive(false);
 
+    //}
 
-    public void correctTarget_quiz()
+   public void lostTarget()
     {
-        Canvas_quiz.SetActive(true);
+        if(hasInteracted)
+        {
+            for (int i = 0; i < buttons.Length; i++)
+            {
+                buttons[i].gameObject.SetActive(true);
+            }
+        }
     }
 
     public void button1()
@@ -50,6 +59,7 @@ public class quest1 : MonoBehaviour
         buttons[1].interactable = false;
         buttons[2].interactable = false;
         exit.SetActive(true);
+       
     }
 
     public void button2()
@@ -58,6 +68,7 @@ public class quest1 : MonoBehaviour
         buttons[0].interactable = false;
         buttons[2].interactable = false;
         exit.SetActive(true);
+        
     }
 
     public void button3()
@@ -66,12 +77,13 @@ public class quest1 : MonoBehaviour
         buttons[1].interactable = false;
         buttons[0].interactable = false;
         exit.SetActive(true);
+        
     }
 
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }
