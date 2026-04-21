@@ -2292,7 +2292,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
   mObserverBehaviour: {fileID: 2106000681}
   mHiddenRoot: {fileID: 0}
-  mTargetName: quiz
+  mTargetName: grass
   mDatasetName: Vuforia/test.xml
   mCastedBehaviour: {fileID: 2106000681}
   mMeshFilter: {fileID: 0}
@@ -2368,13 +2368,13 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: quiz
+  mTrackableName: grass
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/test.xml
-  mAspectRatio: 0.55813813
+  mAspectRatio: 0.545898
   mImageTargetType: 0
-  mWidth: 0.21
-  mHeight: 0.117209
+  mWidth: 1
+  mHeight: 0.545898
   mRuntimeTexture: {fileID: 0}
   mMotionHint: 1
   mTrackingOptimization: 0
