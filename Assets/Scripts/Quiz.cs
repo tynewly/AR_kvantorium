@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
-public class question : MonoBehaviour 
+public class Quiz : MonoBehaviour 
 {
     //этот? да
     public Button exit;
@@ -31,12 +31,14 @@ public class question : MonoBehaviour
 
     public void Target_quiz_found() //тут с
     {
-        Quiz_button.SetActive(true);
+        Canvas_quiz.SetActive(true);
+        Debug.Log("Scan");
+        
+
         //Canvas_quiz.SetActive(false); // а тут отключаешь ты что сканируешь то? какой метод при сканирвоание метки появляется кнопка квиза, а кнопка квиза активирует его, ну канвас
     }
-    public void Quiz() // и тут
+    public void Quiz1() // и тут
     {
-        Canvas_quiz.SetActive(true);
         exit.interactable = true;
         Quiz_button.SetActive(false); //кароче уберу лишнее и забилди вот так вот
     }
@@ -69,6 +71,7 @@ public class question : MonoBehaviour
         correctButton.GetComponent<Image>().color = Color.green;
         lose.SetActive(true);
         answer = true;
+        Quiz1();
     }
     public void correctAnswer()
     {
@@ -80,7 +83,7 @@ public class question : MonoBehaviour
         }
         win.SetActive(true);
         answer = true;
-
+        Quiz1();
     }
 
     void FixedUpdate()//это код я писал чтоле? да, ваш почерк. Ну сразу видно умный человек писал ахпхпа конечно а в чем разница fixedUpdate? 
