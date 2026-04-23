@@ -26,16 +26,16 @@ public class Russian_ancient_script : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        SceneManager.LoadScene(2);
-        Canvas.SetActive(true);
-        image_chronicle.SetActive(false);
-        text_chronicle.SetActive(false);
-        text_down.SetActive(true);
-        book.SetActive(true);
+        //SceneManager.LoadScene(2);
+        //Canvas.SetActive(true);
+        //image_chronicle.SetActive(false);
+        //text_chronicle.SetActive(false);
+        //text_down.SetActive(true);
+        //book.SetActive(true);
         //variation_1.SetActive(false);
         //variation_2.SetActive(false);
         //ariation_3.SetActive(false);
-        text_up.SetActive(true);
+        //text_up.SetActive(true);
     }
 
     public void saveText()

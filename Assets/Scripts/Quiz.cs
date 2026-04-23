@@ -13,6 +13,7 @@ public class Quiz : MonoBehaviour
     public float time = 30;
     private bool answer = false;
     public GameObject Quiz_button;
+    private bool controlTime = false;
 
 
 
@@ -22,6 +23,7 @@ public class Quiz : MonoBehaviour
         //Canvas_quiz.SetActive(false); //а как он появится если ты канвас с ним выключаекшь?
         win.SetActive(false);
         lose.SetActive(false);
+        GetComponent<Quiz>();
     }
 
     public void Exit()
@@ -33,6 +35,7 @@ public class Quiz : MonoBehaviour
     {
         Canvas_quiz.SetActive(true);
         Debug.Log("Scan");
+        controlTime = true;
         
 
         //Canvas_quiz.SetActive(false); // а тут отключаешь ты что сканируешь то? какой метод при сканирвоание метки появляется кнопка квиза, а кнопка квиза активирует его, ну канвас
@@ -45,20 +48,23 @@ public class Quiz : MonoBehaviour
 
     public void timeAnswer()
     {
-        if (answer == false)
+        if (controlTime == true)
         {
-            time = time - Time.deltaTime;
-            if (time < 0)
+            if (answer == false)
             {
-                wrongAnswer();
+                time = time - Time.deltaTime;
+                if (time < 0)
+                {
+                    wrongAnswer();
 
+                }
+
+                Debug.Log(time);
             }
 
-            Debug.Log(time);
         }
-            
-
-        
+       
+                 
     }    
     public void wrongAnswer()
     {
