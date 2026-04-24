@@ -5,6 +5,7 @@ public class hideScript : MonoBehaviour
     public GameObject Canvas_quest;
     public GameObject Canvas_quiz;
     public GameObject Canvas_start;
+    public GameObject Canvas_translate;
     private void Start()
     {
         //а не могу край уже далеко ушли, ну суть в том что у тебя канвас квест и квиз не прописан был
@@ -12,6 +13,8 @@ public class hideScript : MonoBehaviour
         Canvas_start.SetActive(true);
         Canvas_quest.SetActive(false);
         Canvas_quiz.SetActive(false);
+        Canvas_translate.SetActive(false);
+
 
     }
 }

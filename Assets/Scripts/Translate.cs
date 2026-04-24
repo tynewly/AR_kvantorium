@@ -21,8 +21,7 @@ public class Translate : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        Canvas_translate.SetActive(false);
- 
+       
     }
     
 

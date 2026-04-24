@@ -16,10 +16,11 @@ public class Russian_ancient_script : MonoBehaviour
     //public GameObject variation_1;
    // public GameObject variation_2;
     //public GameObject variation_3;
-    public TextMeshProUGUI text_down1;
+    public TextMeshProUGUI text_down2;
     public GameObject text_up;
     public TextMeshProUGUI text_up2;
     public TMP_InputField inputField;
+    public GameObject inputField1;    
 
     private int count = 0;
     private string[] correctSeas = { "Каспийское", "Аравийское", "Чёрное" };
@@ -27,21 +28,15 @@ public class Russian_ancient_script : MonoBehaviour
     void Start()
     {
         //SceneManager.LoadScene(2);
-        //Canvas.SetActive(true);
-        //image_chronicle.SetActive(false);
-        //text_chronicle.SetActive(false);
-        //text_down.SetActive(true);
-        //book.SetActive(true);
-        //variation_1.SetActive(false);
-        //variation_2.SetActive(false);
-        //ariation_3.SetActive(false);
-        //text_up.SetActive(true);
+        Canvas.SetActive(false);
+        
     }
 
     public void saveText()
     {
         string userText = inputField.text;
         string[] words = userText.Split(' ');
+        Debug.Log(words.Length);
         if (words.Length == 3)
         {
             if (words[0] == "Каспийское") 
@@ -81,7 +76,7 @@ public class Russian_ancient_script : MonoBehaviour
 
     public void Target_found()
     {
-        SceneManager.LoadScene(2);
+        //SceneManager.LoadScene(2);
         Canvas.SetActive(true);
         image_chronicle.SetActive(false);
         text_chronicle.SetActive(false);
@@ -91,6 +86,9 @@ public class Russian_ancient_script : MonoBehaviour
         //variation_2.SetActive(false);
         //ariation_3.SetActive(false);
         text_up.SetActive(true);
+        inputField1.SetActive(false);
+
+
     }
     public void book_touch()
     {
@@ -98,11 +96,13 @@ public class Russian_ancient_script : MonoBehaviour
         image_chronicle.SetActive(true);
         text_chronicle.SetActive(false);
         text_up.SetActive(false);
+        text_down2.text = "Нажмите на записи, чтобы прочитать";
+        inputField1.SetActive(false);
     }
     public void chronicle_touch()
     {
         text_chronicle.SetActive(true);
-        text_down1.text = "Нажмите на надпись, чтобы выйти";
+        text_down2.text = "Нажмите на надпись, чтобы выйти";
         text_up.SetActive(false);
     }
     public void textDown_touch()
@@ -113,9 +113,13 @@ public class Russian_ancient_script : MonoBehaviour
         //variation_1.SetActive(true);
         //variation_2.SetActive(true);
         //variation_3.SetActive(true);
-        text_up2.text = "Через какие моря держал путь Великого путешественника Афанасия Никитина?";
-        book.transform.position = new Vector3(-189f, 23f, 0f);
-        book.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+        text_up.SetActive(true);
+        text_down2.text = "Нажмите на книгу, чтобы вспомнить";
+        inputField1.SetActive(true);
+        text_up2.text = "Через какие моря проходил путь Великого путешественника Афанасия Никитина?";
+        //book.transform.position = new Vector3(-189f, 23f, 0f);
+        //book.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+
     }
 
 
