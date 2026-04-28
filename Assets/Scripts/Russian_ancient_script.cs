@@ -24,6 +24,7 @@ public class Russian_ancient_script : MonoBehaviour
 
     private int count = 0;
     private string[] correctSeas = { "Каспийское", "Аравийское", "Чёрное" };
+    private string[] userWords;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -35,8 +36,9 @@ public class Russian_ancient_script : MonoBehaviour
     public void saveText()
     {
         string userText = inputField.text;
-        string[] words = userText.Split(' ');
+        string[] words = userText.Split(' ', System.StringSplitOptions.RemoveEmptyEntries) ;
         Debug.Log(words.Length);
+        
         if (words.Length == 3)
         {
             if (words[0] == "Каспийское") 
