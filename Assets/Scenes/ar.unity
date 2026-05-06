@@ -324,11 +324,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-<<<<<<< Updated upstream:Assets/Scenes/ar.unity
   m_AnchoredPosition: {x: 187.98203, y: -2.440857}
 =======
   m_AnchoredPosition: {x: 187.98195, y: -2.4408226}
->>>>>>> Stashed changes:Assets/ar.unity
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &86523458
@@ -1908,7 +1906,6 @@ RectTransform:
   m_AnchoredPosition: {x: -284.62393, y: 253.82553}
   m_SizeDelta: {x: 310.1544, y: 240.5233}
   m_Pivot: {x: 0.5, y: 0.5}
-<<<<<<< Updated upstream:Assets/Scenes/ar.unity
 --- !u!1 &585010640
 GameObject:
   m_ObjectHideFlags: 0
@@ -2049,7 +2046,6 @@ CanvasRenderer:
 --- !u!1 &644876153
 =======
 --- !u!1 &672621453
->>>>>>> Stashed changes:Assets/ar.unity
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8492,8 +8488,6 @@ MonoBehaviour:
   Glass: {fileID: 34215531}
   Button_start: {fileID: 478327360}
   Canvas_start: {fileID: 315013871}
-<<<<<<< HEAD
-<<<<<<< Updated upstream:Assets/Scenes/ar.unity
 --- !u!1 &2045234301
 GameObject:
   m_ObjectHideFlags: 0
@@ -8570,10 +8564,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 644876158}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-=======
->>>>>>> Stashed changes:Assets/ar.unity
-=======
->>>>>>> 0a20848e9310ec66a031fa4e9feabca52cdc618a
 --- !u!1 &2058968170
 GameObject:
   m_ObjectHideFlags: 0
