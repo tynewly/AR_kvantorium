@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 public class Quiz : MonoBehaviour 
 {
     //этот? да
@@ -8,19 +7,22 @@ public class Quiz : MonoBehaviour
     public GameObject Canvas_quiz;
     public Button[] buttonWrong;
     public Button correctButton;
+    public GameObject win;
+    public GameObject lose;
     private Color color;
     public float time = 30;
     private bool answer = false;
     public GameObject Quiz_button;
     private bool controlTime = false;
-    public TextMeshProUGUI quiz_question;
 
 
 
-
+   
     void Start()
     {
         //Canvas_quiz.SetActive(false); //а как он появится если ты канвас с ним выключаекшь?
+        win.SetActive(false);
+        lose.SetActive(false);
         GetComponent<Quiz>();
     }
 
@@ -73,9 +75,9 @@ public class Quiz : MonoBehaviour
 
         }
         correctButton.GetComponent<Image>().color = Color.green;
+        lose.SetActive(true);
         answer = true;
         Quiz1();
-        quiz_question.text = "Увы неверно, пропустите ход";
     }
     public void correctAnswer()
     {
@@ -85,9 +87,9 @@ public class Quiz : MonoBehaviour
         {
             buttonWrong[i].GetComponent<Image>().color = Color.red;
         }
+        win.SetActive(true);
         answer = true;
         Quiz1();
-        quiz_question.text = "Все так, за вашу эрудированность вас наградили сведением, что в Казани не хватает меха";
     }
 
     void FixedUpdate()//это код я писал чтоле? да, ваш почерк. Ну сразу видно умный человек писал ахпхпа конечно а в чем разница fixedUpdate? 

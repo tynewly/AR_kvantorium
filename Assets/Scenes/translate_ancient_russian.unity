@@ -501,12 +501,10 @@ MonoBehaviour:
   text_chronicle: {fileID: 347878609}
   text_down: {fileID: 1440716695}
   book: {fileID: 1027170970}
-  text_down2: {fileID: 0}
+  text_down1: {fileID: 1440716697}
   text_up: {fileID: 1360793151}
   text_up2: {fileID: 1360793153}
   inputField: {fileID: 2007147251}
-  inputField1: {fileID: 0}
-  confimButton: {fileID: 0}
 --- !u!1 &753310774
 GameObject:
   m_ObjectHideFlags: 0
