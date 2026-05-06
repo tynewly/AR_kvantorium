@@ -31,11 +31,16 @@ public class FollowFinger : MonoBehaviour
           // Touch это тип данных. Он типо берет инфу о пальце и сохраняет в переменную tоuch
             Glass.SetActive(true);
             Glass.transform.position = touch.position;
+<<<<<<< Updated upstream
             Debug.Log("работает");
+=======
+            Debug.Log("Работает");
+>>>>>>> Stashed changes
         }
         else
         {
-            Glass.gameObject.SetActive(false);
+            Glass.SetActive(false);
+            Debug.Log("Не работает");
         }
         
     }
