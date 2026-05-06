@@ -152,7 +152,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
   mObserverBehaviour: {fileID: 6848861}
   mHiddenRoot: {fileID: 0}
-  mTargetName: new_ancient_translate
+  mTargetName: cat
   mDatasetName: Vuforia/test.xml
   mCastedBehaviour: {fileID: 6848861}
   mMeshFilter: {fileID: 0}
@@ -228,13 +228,13 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: new_ancient_translate
+  mTrackableName: cat
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/test.xml
-  mAspectRatio: 1.490566
+  mAspectRatio: 0.75
   mImageTargetType: 0
-  mWidth: 10
-  mHeight: 14.905661
+  mWidth: 1
+  mHeight: 0.75
   mRuntimeTexture: {fileID: 0}
   mMotionHint: 1
   mTrackingOptimization: 0
@@ -4153,13 +4153,13 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: new_quest
+  mTrackableName: beautiful-sea-landscape-with-water-nature_23-2151120317
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/test.xml
-  mAspectRatio: 1.490566
+  mAspectRatio: 0.560703
   mImageTargetType: 0
-  mWidth: 10
-  mHeight: 14.905661
+  mWidth: 1
+  mHeight: 0.560703
   mRuntimeTexture: {fileID: 0}
   mMotionHint: 1
   mTrackingOptimization: 0
@@ -4195,7 +4195,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
   mObserverBehaviour: {fileID: 1073593080}
   mHiddenRoot: {fileID: 0}
-  mTargetName: new_quest
+  mTargetName: beautiful-sea-landscape-with-water-nature_23-2151120317
   mDatasetName: Vuforia/test.xml
   mCastedBehaviour: {fileID: 1073593080}
   mMeshFilter: {fileID: 0}
@@ -4476,13 +4476,13 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: new_quiz
+  mTrackableName: quiz
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/test.xml
-  mAspectRatio: 1.490566
+  mAspectRatio: 0.55813813
   mImageTargetType: 0
-  mWidth: 10
-  mHeight: 14.905661
+  mWidth: 0.21
+  mHeight: 0.117209
   mRuntimeTexture: {fileID: 0}
   mMotionHint: 1
   mTrackingOptimization: 0
@@ -4517,7 +4517,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
   mObserverBehaviour: {fileID: 1141099398}
   mHiddenRoot: {fileID: 0}
-  mTargetName: new_quiz
+  mTargetName: quiz
   mDatasetName: Vuforia/test.xml
   mCastedBehaviour: {fileID: 1141099398}
   mMeshFilter: {fileID: 0}
