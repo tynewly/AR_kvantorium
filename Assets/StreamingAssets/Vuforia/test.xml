@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig>
   <Tracking>
-    <ImageTarget name="new_ancient_translate" size="10.000000 14.905661" />
-    <ImageTarget name="new_quest" size="10.000000 14.905661" />
-    <ImageTarget name="new_quiz" size="10.000000 14.905661" />
     <ImageTarget name="cat" size="1.000000 0.750000" />
     <ImageTarget name="quiz" size="0.210000 0.117209" />
     <ImageTarget name="grass" size="1.000000 0.545898" />
