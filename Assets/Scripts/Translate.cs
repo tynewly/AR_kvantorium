@@ -17,14 +17,11 @@ public class Translate : MonoBehaviour
     private Color color;
     public TextMeshProUGUI Text;
     public int count = 0;
-    public GameObject Button;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        Canvas_translate.SetActive(false);
-        Button.SetActive(false);
-
+       
     }
     
 
@@ -70,11 +67,6 @@ public class Translate : MonoBehaviour
         variants[1].interactable = false;
         v2 = true;
     }
-    public void exit()
-    {
-        Canvas_translate.SetActive(false);
-        Button.SetActive(false);
-    }
 
 
     // Update is called once per frame
@@ -91,17 +83,8 @@ public class Translate : MonoBehaviour
             variants[0].IsDestroyed();
             count++;
             Text.text = $"Верно сопоставлено вариантов: {count} ";
-
         }
-        else
-        {
-            color = Color.red;
-            Text.text =  $"Вы проиграли, правильно вариантов: {count}";
-
-
-
-        }
-        if (c1 == v1)
+        else if (c1 == v1)
         {
 
             card[0].interactable = true;
@@ -112,17 +95,8 @@ public class Translate : MonoBehaviour
             variants[1].IsDestroyed();
             count++;
             Text.text = $"Верно сопоставлено вариантов: {count} ";
-
         }
-        else
-        {
-            color = Color.red;
-            Text.text = $"Вы проиграли, правильно вариантов: {count}";
-
-
-
-        }
-        if (c2 == v2)
+        else if (c2 == v2)
         {
 
             card[0].interactable = true;
@@ -133,21 +107,16 @@ public class Translate : MonoBehaviour
             variants[2].IsDestroyed();
             count++;
             Text.text = $"Верно сопоставлено вариантов: {count} ";
-
         }
         else
         {
             color = Color.red;
-            Text.text = $"Вы проиграли, правильно вариантов: {count}";
-
-
-
+            Text.text =  $"Вы проиграли, правильно  вариантов: {count}";
         }
-        if (count == 3)
+        if ( count == 3)
         {
-            Text.text = "Все верно, получите 1 золотую монету";
-            Button.SetActive(true);
+            Text.text = "Вы победили! Получите 2 монеты";
         }
-
+       
     }
 }

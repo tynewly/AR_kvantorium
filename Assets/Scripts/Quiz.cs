@@ -1,7 +1,8 @@
 using UnityEngine;
 using UnityEngine.UI;
-public class question : MonoBehaviour 
+public class Quiz : MonoBehaviour 
 {
+    //этот? да
     public Button exit;
     public GameObject Canvas_quiz;
     public Button[] buttonWrong;
@@ -11,16 +12,18 @@ public class question : MonoBehaviour
     private Color color;
     public float time = 30;
     private bool answer = false;
-  
+    public GameObject Quiz_button;
+    private bool controlTime = false;
 
 
 
+   
     void Start()
     {
+        //Canvas_quiz.SetActive(false); //а как он появится если ты канвас с ним выключаекшь?
         win.SetActive(false);
         lose.SetActive(false);
-      
-
+        GetComponent<Quiz>();
     }
 
     public void Exit()
@@ -28,28 +31,40 @@ public class question : MonoBehaviour
         Canvas_quiz.SetActive(false);
     }
 
-    public void Quiz()
+    public void Target_quiz_found() //тут с
     {
         Canvas_quiz.SetActive(true);
+        Debug.Log("Scan");
+        controlTime = true;
+        
+
+        //Canvas_quiz.SetActive(false); // а тут отключаешь ты что сканируешь то? какой метод при сканирвоание метки появляется кнопка квиза, а кнопка квиза активирует его, ну канвас
+    }
+    public void Quiz1() // и тут
+    {
         exit.interactable = true;
+        Quiz_button.SetActive(false); //кароче уберу лишнее и забилди вот так вот
     }
 
     public void timeAnswer()
     {
-        if (answer == false)
+        if (controlTime == true)
         {
-            time = time - Time.deltaTime;
-            if (time < 0)
+            if (answer == false)
             {
-                wrongAnswer();
+                time = time - Time.deltaTime;
+                if (time < 0)
+                {
+                    wrongAnswer();
 
+                }
+
+                Debug.Log(time);
             }
 
-            Debug.Log(time);
         }
-            
-
-        
+       
+                 
     }    
     public void wrongAnswer()
     {
@@ -62,6 +77,7 @@ public class question : MonoBehaviour
         correctButton.GetComponent<Image>().color = Color.green;
         lose.SetActive(true);
         answer = true;
+        Quiz1();
     }
     public void correctAnswer()
     {
@@ -73,10 +89,10 @@ public class question : MonoBehaviour
         }
         win.SetActive(true);
         answer = true;
-
+        Quiz1();
     }
 
-    void FixedUpdate()
+    void FixedUpdate()//это код я писал чтоле? да, ваш почерк. Ну сразу видно умный человек писал ахпхпа конечно а в чем разница fixedUpdate? 
     {
         timeAnswer();
     }
