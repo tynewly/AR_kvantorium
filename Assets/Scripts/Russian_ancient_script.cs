@@ -20,7 +20,8 @@ public class Russian_ancient_script : MonoBehaviour
     public GameObject text_up;
     public TextMeshProUGUI text_up2;
     public TMP_InputField inputField;
-    public GameObject inputField1;    
+    public GameObject inputField1;
+    public GameObject confimButton;
 
     private int count = 0;
     private string[] correctSeas = { "Каспийское", "Аравийское", "Чёрное" };
@@ -35,7 +36,8 @@ public class Russian_ancient_script : MonoBehaviour
     public void saveText()
     {
         string userText = inputField.text;
-        string[] words = userText.Split(' ');
+        char[] separators = new char[] { ' ', ',', '.', ':', ';' };
+        string[] words = userText.Split(separators, System.StringSplitOptions.RemoveEmptyEntries);
         Debug.Log(words.Length);
         if (words.Length == 3)
         {
@@ -87,6 +89,7 @@ public class Russian_ancient_script : MonoBehaviour
         //ariation_3.SetActive(false);
         text_up.SetActive(true);
         inputField1.SetActive(false);
+        confimButton.SetActive(false);
 
 
     }
@@ -107,6 +110,7 @@ public class Russian_ancient_script : MonoBehaviour
     }
     public void textDown_touch()
     {
+        confimButton.SetActive(true);
         image_chronicle.SetActive(false);
         text_chronicle.SetActive(false);
         book.SetActive(true);
