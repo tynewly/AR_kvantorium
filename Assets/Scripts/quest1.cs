@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -5,12 +6,15 @@ using UnityEngine.UI;
 
 public class quest1 : MonoBehaviour
 {
-    public TextMeshProUGUI Text;
+    public TextMeshProUGUI TextForUser;
     public GameObject Canvas_quest;
     public Button[] buttons;
     public GameObject exit;
     public GameObject ship;
     private bool hasInteracted = false;
+    public TMP_InputField inputField;
+    public GameObject inputField1;
+    public GameObject confimAnswer;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -21,6 +25,8 @@ public class quest1 : MonoBehaviour
         //я голосом записал слушаю
         exit.SetActive(false);
         ship.SetActive(true);
+        inputField1.SetActive(false);
+        confimAnswer.SetActive(false);
     }
 
 
@@ -55,7 +61,7 @@ public class quest1 : MonoBehaviour
 
     public void button1()
     {
-        Text.text = "Вы испугались и решили откупиться. Отдайте 1 любую единицу товара";
+        TextForUser.text = "Вы испугались и решили откупиться. Отдайте 1 любую единицу товара";
         buttons[1].interactable = false;
         buttons[2].interactable = false;
         exit.SetActive(true);
@@ -64,16 +70,37 @@ public class quest1 : MonoBehaviour
 
     public void button2()
     {
-        Text.text = "Вы не повелись на провокации. Бросьте кубик, он определит исход драки";
+        TextForUser.text = "Вы не повелись на провокации. Бросьте кубик, он определит исход драки";
         buttons[0].interactable = false;
         buttons[2].interactable = false;
         exit.SetActive(true);
-        
+        inputField1.SetActive(true);
+        confimAnswer.SetActive(true);
+
+
+
+}
+public void cubeText()
+    {
+        int userText = Convert.ToInt32(inputField.text);
+        if (userText > 0 && userText < 4)
+        {
+            TextForUser.text = "Вы получили больших шишек, пропустите следующий ход";
+        }
+        else if (userText > 3 && userText < 7)
+        {
+            TextForUser.text = "Силы вам не занимать, возьмите 2 монеты от разбойников";
+        }
+        else
+        {
+            TextForUser.text = "Введено некорректное число, повторите попытку";
+        }
+
     }
 
-    public void button3()
+        public void button3()
     {
-        Text.text = "Противники оказались слишком сильны, вернитесь на 2 шага назад";
+        TextForUser.text = "Противники оказались слишком сильны, вернитесь на 2 шага назад";
         buttons[1].interactable = false;
         buttons[0].interactable = false;
         exit.SetActive(true);
