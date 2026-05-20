@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig>
   <Tracking>
+    <ImageTarget name="Tver" size="1.000000 1.883978" />
     <ImageTarget name="new_ancient_translate" size="10.000000 14.905661" />
     <ImageTarget name="new_quest" size="10.000000 14.905661" />
     <ImageTarget name="new_quiz" size="10.000000 14.905661" />
-    <ImageTarget name="cat" size="1.000000 0.750000" />
-    <ImageTarget name="quiz" size="0.210000 0.117209" />
     <ImageTarget name="grass" size="1.000000 0.545898" />
-    <ImageTarget name="beautiful-sea-landscape-with-water-nature_23-2151120317" size="1.000000 0.560703" />
   </Tracking>
 </QCARConfig>
