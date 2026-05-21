@@ -22,6 +22,7 @@ public class MatchPairsUI : MonoBehaviour
 
     private Image selectedImage;
     private TextMeshProUGUI selectedText;
+    public GameObject Canvas;
 
     private int matchedCount;
 
@@ -58,6 +59,11 @@ public class MatchPairsUI : MonoBehaviour
         CheckMatch();
     }
 
+    public void Exit()
+    {
+        Canvas.SetActive(false);
+
+    }
     private void CheckMatch()
     {
         if (selectedImage == null || selectedText == null)

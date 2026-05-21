@@ -57,12 +57,14 @@ public class Russian_ancient_script : MonoBehaviour
             if (count == 3)
             {
                 text_up2.text = "Все верно! Получите 1 золотую монету";
-                exit.SetActive(true);  
+                exit.SetActive(true);
+               
             }
             else
             {
                 text_up2.text = "Увы ,неверно. Отдайте 1 золотую монету";
-                exit.SetActive(true);  
+                exit.SetActive(true);
+                
             }
         }
         else if (words.Length < 3)
@@ -81,6 +83,7 @@ public class Russian_ancient_script : MonoBehaviour
 
     public void Exit()
     {
+       
         Canvas.SetActive(false);
     }
     public void Target_found()
@@ -97,6 +100,7 @@ public class Russian_ancient_script : MonoBehaviour
         text_up.SetActive(true);
         inputField1.SetActive(false);
         confimButton.SetActive(false);
+        exit.SetActive(false);
 
 
     }
@@ -108,12 +112,14 @@ public class Russian_ancient_script : MonoBehaviour
         text_up.SetActive(false);
         text_down2.text = "Нажмите на записи, чтобы прочитать";
         inputField1.SetActive(false);
+        exit.SetActive(false);
     }
     public void chronicle_touch()
     {
         text_chronicle.SetActive(true);
         text_down2.text = "Нажмите на надпись, чтобы выйти";
         text_up.SetActive(false);
+        exit.SetActive(false);
     }
     public void textDown_touch()
     {
@@ -130,7 +136,7 @@ public class Russian_ancient_script : MonoBehaviour
         text_up2.text = "Через какие моря проходил путь Великого путешественника Афанасия Никитина?";
         //book.transform.position = new Vector3(-189f, 23f, 0f);
         //book.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
-
+        exit.SetActive(false);
     }
 
 
