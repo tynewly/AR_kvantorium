@@ -22,6 +22,7 @@ public class Russian_ancient_script : MonoBehaviour
     public TMP_InputField inputField;
     public GameObject inputField1;
     public GameObject confimButton;
+    public GameObject exit;
 
     private int count = 0;
     private string[] correctSeas = { "Каспийское", "Аравийское", "Чёрное" };
@@ -56,10 +57,12 @@ public class Russian_ancient_script : MonoBehaviour
             if (count == 3)
             {
                 text_up2.text = "Все верно! Получите 1 золотую монету";
+                exit.SetActive(true);  
             }
             else
             {
                 text_up2.text = "Увы ,неверно. Отдайте 1 золотую монету";
+                exit.SetActive(true);  
             }
         }
         else if (words.Length < 3)
@@ -76,6 +79,10 @@ public class Russian_ancient_script : MonoBehaviour
 
     }
 
+    public void Exit()
+    {
+        Canvas.SetActive(false);
+    }
     public void Target_found()
     {
         //SceneManager.LoadScene(2);

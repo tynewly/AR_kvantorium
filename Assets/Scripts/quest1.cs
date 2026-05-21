@@ -79,22 +79,23 @@ public class quest1 : MonoBehaviour
 
 
 
-}
-public void cubeText()
+    }
+    public void cubeText()
     {
-        int userText = Convert.ToInt32(inputField.text);
-        if (userText > 0 && userText < 4)
-        {
-            TextForUser.text = "Вы получили больших шишек, пропустите следующий ход";
-        }
-        else if (userText > 3 && userText < 7)
-        {
-            TextForUser.text = "Силы вам не занимать, возьмите 2 монеты от разбойников";
-        }
-        else
-        {
-            TextForUser.text = "Введено некорректное число, повторите попытку";
-        }
+            String userText = inputField.text;
+            int test = Convert.ToInt32(userText); //кароче смысла это не меняет но мб поможет если сделать последовательно конвертацию, но не уверен
+            if (test > 0 && test < 4)
+            {
+                TextForUser.text = "Вы получили больших шишек, пропустите следующий ход";
+            }
+            else if (test > 3 && test < 7)
+            {
+                TextForUser.text = "Силы вам не занимать, возьмите 2 монеты от разбойников";
+            }
+            else
+            {
+                TextForUser.text = "Введено некорректное число, повторите попытку";
+            }
 
     }
 
