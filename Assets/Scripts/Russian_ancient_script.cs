@@ -50,7 +50,7 @@ public class Russian_ancient_script : MonoBehaviour
             {
                 count++;
             }
-            if (words[2] == "Чёрное") 
+            if (words[2] == "Чёрное" || words[2] == "Черное") 
             {
                 count++;
             }
@@ -58,12 +58,15 @@ public class Russian_ancient_script : MonoBehaviour
             {
                 text_up2.text = "Все верно! Получите 1 золотую монету";
                 exit.SetActive(true);
-               
+                Invoke("Exit", 10f);
+
             }
             else
             {
                 text_up2.text = "Увы ,неверно. Отдайте 1 золотую монету";
                 exit.SetActive(true);
+                Invoke("Exit", 10f);
+                
                 
             }
         }
@@ -84,7 +87,19 @@ public class Russian_ancient_script : MonoBehaviour
     public void Exit()
     {
        
+        
+        image_chronicle.SetActive(false);
+        text_chronicle.SetActive(false);
+        text_down.SetActive(false);
+        book.SetActive(false);
+        //variation_1.SetActive(false);
+        //variation_2.SetActive(false);
+        //ariation_3.SetActive(false);
+        text_up.SetActive(false);
+        inputField1.SetActive(false);
+        confimButton.SetActive(false);
         Canvas.SetActive(false);
+
     }
     public void Target_found()
     {
@@ -113,6 +128,7 @@ public class Russian_ancient_script : MonoBehaviour
         text_down2.text = "Нажмите на записи, чтобы прочитать";
         inputField1.SetActive(false);
         exit.SetActive(false);
+        confimButton.SetActive(false);
     }
     public void chronicle_touch()
     {
@@ -120,6 +136,7 @@ public class Russian_ancient_script : MonoBehaviour
         text_down2.text = "Нажмите на надпись, чтобы выйти";
         text_up.SetActive(false);
         exit.SetActive(false);
+        confimButton.SetActive(false);
     }
     public void textDown_touch()
     {

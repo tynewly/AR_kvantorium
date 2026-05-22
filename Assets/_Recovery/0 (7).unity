@@ -3086,8 +3086,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 644876154}
-        m_TargetAssemblyTypeName: Russian_ancient_script, Assembly-CSharp
+      - m_Target: {fileID: 1959407508}
+        m_TargetAssemblyTypeName: exit, Assembly-CSharp
         m_MethodName: Exit
         m_Mode: 1
         m_Arguments:
