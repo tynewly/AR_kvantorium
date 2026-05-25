@@ -4,6 +4,8 @@ using TMPro;
 
 public class MatchPairsUI : MonoBehaviour
 {
+    public GameObject exit;
+    public TextMeshProUGUI replica;
     [System.Serializable]
     public class Pair
     {
@@ -81,10 +83,11 @@ public class MatchPairsUI : MonoBehaviour
 
             selectedImage = null;
             selectedText = null;
-
+            replica.text = "Так держать";
             if (matchedCount >= pairs.Length)
             {
-                Debug.Log("Все пары найдены!");
+                exit.SetActive(true);
+                replica.text = "Все верно. Странник поделился, что в Персии ценят жемчуг";
             }
         }
         else
@@ -92,8 +95,14 @@ public class MatchPairsUI : MonoBehaviour
             selectedImage.color = wrongColor;
             selectedText.color = wrongColor;
 
-            Invoke(nameof(ClearWrongSelection), 0.5f);
+            Invoke(nameof(ClearWrongSelection), 1f);
+            replica.text = "Увы, неверно";
         }
+    }
+
+    public void Exit_Button()
+    {
+        Canvas.SetActive(false);
     }
 
     private void ClearWrongSelection()
@@ -106,6 +115,7 @@ public class MatchPairsUI : MonoBehaviour
 
         selectedImage = null;
         selectedText = null;
+        replica.text = "Прочтите записки и ответьте на вопрос";
     }
 
     private bool IsCorrectPair(Image image, TextMeshProUGUI text)
@@ -140,6 +150,9 @@ public class MatchPairsUI : MonoBehaviour
 
             pair.image.raycastTarget = true;
             pair.text.raycastTarget = true;
+            replica.text = "Прочтите записки и ответьте на вопрос";
+            exit.SetActive(false);
+
         }
     }
 }
