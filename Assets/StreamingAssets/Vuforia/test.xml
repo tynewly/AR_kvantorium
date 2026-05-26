@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig>
   <Tracking>
-    <ImageTarget name="translate" size="10.000000 14.923259" />
-    <ImageTarget name="Tver" size="1.000000 1.883978" />
-    <ImageTarget name="new_ancient_translate" size="10.000000 14.905661" />
-    <ImageTarget name="new_quest" size="10.000000 14.905661" />
-    <ImageTarget name="new_quiz" size="10.000000 14.905661" />
+    <ImageTarget name="ar-nizninovgorod" size="10.000000 12.985782" />
+    <ImageTarget name="ar_tver" size="10.000000 12.985782" />
+    <ImageTarget name="ar_quest" size="10.000000 12.596154" />
+    <ImageTarget name="ar_ancienttranslate" size="10.000000 12.596154" />
+    <ImageTarget name="ar_quiz1" size="10.000000 12.596154" />
+    <ImageTarget name="ar_translate1" size="10.000000 12.596154" />
   </Tracking>
 </QCARConfig>

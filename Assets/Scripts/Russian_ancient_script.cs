@@ -58,7 +58,7 @@ public class Russian_ancient_script : MonoBehaviour
             {
                 text_up2.text = "Все верно! Получите 1 золотую монету";
                 exit.SetActive(true);
-                Invoke("Exit", 10f);
+                //Invoke("Exit", 10f);
 
             }
             else
