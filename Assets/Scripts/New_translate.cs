@@ -31,6 +31,8 @@ public class MatchPairsUI : MonoBehaviour
     private void Start()
     {
         ResetVisuals();
+        exit.SetActive(false);
+
     }
 
     public void SelectImage(Image image)
