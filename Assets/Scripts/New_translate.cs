@@ -4,6 +4,7 @@ using TMPro;
 
 public class MatchPairsUI : MonoBehaviour
 {
+    public GameObject exit;  
     [System.Serializable]
     public class Pair
     {
@@ -11,6 +12,8 @@ public class MatchPairsUI : MonoBehaviour
         public TextMeshProUGUI text;
     }
 
+    [Header("Answer")]
+    public TextMeshProUGUI replica;
     [Header("Pairs")]
     public Pair[] pairs = new Pair[3];
 
@@ -81,18 +84,19 @@ public class MatchPairsUI : MonoBehaviour
 
             selectedImage = null;
             selectedText = null;
-
+            replica.text = "Так держать!"; // по идее вот тут ворк, потомутчо ты мне написала, что после каждого обнаружения, а не в конце хорошо
             if (matchedCount >= pairs.Length)
             {
-                Debug.Log("Все пары найдены!");
+                FinishGame();
+                //Debug.Log("Все пары найдены!");
             }
         }
         else
         {
             selectedImage.color = wrongColor;
             selectedText.color = wrongColor;
-
-            Invoke(nameof(ClearWrongSelection), 0.5f);
+            replica.text = "Неверно, попробуй еще раз";
+            Invoke(nameof(ClearWrongSelection), 1f);
         }
     }
 
@@ -106,6 +110,7 @@ public class MatchPairsUI : MonoBehaviour
 
         selectedImage = null;
         selectedText = null;
+        replica.text = "Сопоставьте незнакомые слова с объектами";//ворк? да
     }
 
     private bool IsCorrectPair(Image image, TextMeshProUGUI text)
@@ -119,6 +124,15 @@ public class MatchPairsUI : MonoBehaviour
         return false;
     }
 
+    public void FinishGame()
+    {
+        if (matchedCount == 3)
+        {
+            replica.fontSize = 80;//типо он изменит только размер текста последней надписи поняла? Я поняла
+            replica.text = "Молодец так держать!Радушный странник поделился с вами,что в Персии ценят жемчуг";
+            exit.SetActive(true);
+        }
+    }
     private bool IsImageMatched(Image image)
     {
         return image.raycastTarget == false;
@@ -140,6 +154,7 @@ public class MatchPairsUI : MonoBehaviour
 
             pair.image.raycastTarget = true;
             pair.text.raycastTarget = true;
+            exit.SetActive(false);
         }
     }
 }

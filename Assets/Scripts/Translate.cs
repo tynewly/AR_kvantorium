@@ -31,6 +31,11 @@ public class Translate : MonoBehaviour
   
     }
 
+    public void Exit()
+    {
+        Canvas_translate.SetActive(false);
+
+    }
     public void card_0()
     {
         card[1].interactable = false;

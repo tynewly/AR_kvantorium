@@ -65,7 +65,7 @@ public class Russian_ancient_script : MonoBehaviour
             {
                 text_up2.text = "Увы ,неверно. Отдайте 1 золотую монету";
                 exit.SetActive(true);
-                Invoke("Exit", 10f);
+                //Invoke("Exit", 10f);
                 
                 
             }
@@ -86,8 +86,8 @@ public class Russian_ancient_script : MonoBehaviour
 
     public void Exit()
     {
-       
-        
+
+        Debug.Log("Exit вызван");
         image_chronicle.SetActive(false);
         text_chronicle.SetActive(false);
         text_down.SetActive(false);
@@ -140,6 +140,7 @@ public class Russian_ancient_script : MonoBehaviour
     }
     public void textDown_touch()
     {
+        Debug.Log("textDown_touch вызван");
         confimButton.SetActive(true);
         image_chronicle.SetActive(false);
         text_chronicle.SetActive(false);
