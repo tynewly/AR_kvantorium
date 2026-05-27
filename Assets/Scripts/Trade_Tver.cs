@@ -13,7 +13,6 @@ public class Trade_Tver : MonoBehaviour
     public GameObject next;
     public GameObject next1;
     public GameObject trade;
-    public GameObject exit;
     public GameObject price;
 
     public ShowModel showModel;
@@ -92,7 +91,6 @@ public class Trade_Tver : MonoBehaviour
         trade.SetActive(false);
         next1.SetActive(false);
         next.SetActive(false);
-        exit.SetActive(true);
     }
 
     public void Exit()
