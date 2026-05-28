@@ -14,6 +14,7 @@ public class Trade_Tver : MonoBehaviour
     public GameObject next1;
     public GameObject trade;
     public GameObject price;
+    public GameObject exit;
 
     public ShowModel showModel;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -21,7 +22,22 @@ public class Trade_Tver : MonoBehaviour
     {
         canvas.SetActive(false);
         showModel.ShowDiorama();
-        dialoge.SetActive(false);
+        //dialoge.SetActive(false);
+        //text_pole.SetActive(false);
+        //sprite_front.SetActive(false);
+        //sprite_right_hand.SetActive(false);
+        //sprite_two_hand.SetActive(false);
+        //trade.SetActive(false);
+        //next.SetActive(false);
+        //next1.SetActive(false);
+        //price.SetActive(false);
+
+    }
+
+    public void TargetFound()
+    {
+        canvas.SetActive(true);
+        exit.SetActive(false);
         text_pole.SetActive(false);
         sprite_front.SetActive(false);
         sprite_right_hand.SetActive(false);
@@ -30,18 +46,13 @@ public class Trade_Tver : MonoBehaviour
         next.SetActive(false);
         next1.SetActive(false);
         price.SetActive(false);
-
-    }
-
-    public void TargetFound()
-    {
-        canvas.SetActive(true);
         
     }
 
 
     public void Dialoge()
     {
+        exit.SetActive(false);
         dialoge.SetActive(false);
         sprite_front.SetActive(true);
         text_pole.SetActive(true);
@@ -51,10 +62,12 @@ public class Trade_Tver : MonoBehaviour
         next.SetActive(true);
         next1.SetActive(false);
         price.SetActive(false);
+       
     }
 
     public void Next()
     {
+        exit.SetActive(false);
         dialoge.SetActive(false);
         sprite_front.SetActive(false);
         sprite_right_hand.SetActive(true);
@@ -65,11 +78,13 @@ public class Trade_Tver : MonoBehaviour
         text_pole1.text = "“орг там велик и люден, а купцы тамошние по всей земле нашей почтены за разум и честность";
         next.SetActive(false);
         next1 .SetActive(true);
+       
     }
 
     public void Next1()
     {
         dialoge.SetActive(false);
+        exit.SetActive(false);
         sprite_front.SetActive(false);
         sprite_two_hand.SetActive(true);
         sprite_right_hand.SetActive(false);
@@ -79,10 +94,12 @@ public class Trade_Tver : MonoBehaviour
         next1.SetActive(false);
         next.SetActive(false);
         trade.SetActive(true);
+        
 
     }
     public void Enter_trade()
     {
+        exit.SetActive(true);
         dialoge.SetActive(false);
         sprite_front.SetActive(false);
         price.SetActive(true);
