@@ -7,8 +7,11 @@ public class Textcontroller : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI dialogueText;
     [SerializeField] private string phrase;
+    [SerializeField] private float temp;
     public GameObject canvasShip;
-    private string result;
+    [SerializeField] private TextContr controller;
+
+    //private string result;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -17,13 +20,14 @@ public class Textcontroller : MonoBehaviour
 
     public void TargetFound()
     {
-        result = "";
+        //result = "";
         dialogueText.text = "";
         canvasShip.SetActive(true);
-        StartCoroutine(Text());
+
+        StartCoroutine(controller.Text(phrase, dialogueText, temp));
     }
 
-    public IEnumerator Text()
+    /*public IEnumerator Text()
     {
         for (int i = 0; i < phrase.Length; i++)
         {
@@ -34,7 +38,7 @@ public class Textcontroller : MonoBehaviour
         yield return new WaitForSeconds(1f);
 
     }
-
+    */
 
     // Update is called once per frame
     void Update()

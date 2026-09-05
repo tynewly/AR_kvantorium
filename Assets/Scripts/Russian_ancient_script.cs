@@ -37,7 +37,7 @@ public class Russian_ancient_script : MonoBehaviour
     public void saveText()
     {
         string userText = inputField.text;
-        char[] separators = new char[] { ' ', ',', '.', ':', ';' };
+        char[] separators = new char[] { ' ', ',', '.', ':', ';' }; //не очень понимаю синтаксис
         string[] words = userText.Split(separators, System.StringSplitOptions.RemoveEmptyEntries);
         Debug.Log(words.Length);
         if (words.Length == 3)
